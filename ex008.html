@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro passos do DOM</title>
+    <style>
+        body { background-color: rgb(101, 197, 230);
+        color:white}
+    </style>
+</head>
+<body>
+    <h1>Aprendendo sobre DOM</h1>
+    <p>Aprendendo a usar <strong>DOM</strong>em Java Script</p>
+    <p>Aqui vai o resultado</p>
+    <div id="eu"> Click aqui </div>
+    <script>
+    var p1 = window.document.getElementsByTagName('p')[0] 
+    window .document.write (p1.innerText)
+    var d = window.document. querySelector ('div#eu')
+    d.style.color = 'blue'
+    </script>
+</body>
+</html>
