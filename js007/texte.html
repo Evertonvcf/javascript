@@ -13,21 +13,26 @@
 </head>
 <body>
     <h1>Where are you from ?</h1>
-    <p> What is your country ? <input type="text" id="pais">
-    <input type="button" value="verificar" onclick="verificar"></p>
-    <div id="res">resultado :
-    </div>
+    <p> What is your country ? 
+    <input type="text" name="country" id="country">
+    <input type="button" value="verificar" onclick="calcular()"></p>
+    <div id="res"></div>
 
     <script>
-        function verificar () {
-            
-           if (pais == Brasil){
-              //(`você é estrangeiro`)
-               innerHTML= `Você é brasileiro`
-            }
+        function calcular() {
+            var country = window.document.getElementById("country")
+            var res = window.document.querySelector("div#res")
+            var countryValue = country.value
+            if (countryValue == "Brasil"){
+                res.innerText = 'você é Brasileiro'
+            } else {
+                res.innerText ='você é Entrangeiro'            }
 
         }
     </script>
+   
+
+
 
 
 </body>
