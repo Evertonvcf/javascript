@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main {
+            padding-bottom: 20px;
+            margin-bottom: 10px;
+            width: 50%;
+            height: 50%;
+            background-image: linear-gradient(to right, rgb(255, 119, 0), blue);
+            color: white;
+            text-shadow: 3px 3px 5px black;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        h1,p {
+            text-align: center;
+        }
+       
+         div {
+            text-align: center;
+        }
+        input {
+            margin-left: 37%;
+            
+        }
+    </style>
+</head>
+<body>
+    <main id="ved">
+        <h1>Dragon Ball </h1>
+        <p>Quem é você ?</p>
+        <input type="text" name="Goku" id="Goku">
+        <input type="button" value="Me mostre seu poder !" onclick="quem()">
+        <div id="eusou"></div>
+    </main>
+
+    <script>
+        function quem () {
+        var name = window.document.getElementById("Goku") 
+        var eusou = window.document.querySelector("div#eusou")
+        var ved =window .document.querySelector('main#ved')
+        var gokudbz = name.value
+            if (gokudbz == "Goku") {
+                eusou.innerText ="Oi eu sou o Goku.Já sou mais forte que um Deus"
+                ved.style.background = 'orange' 
+            } else if (gokudbz =="goku") {
+                eusou.innerText = 'Este é um nome, escreva com letra maiuscula' 
+            } else if (gokudbz =="Vedita") {
+                eusou.innerText = 'O principe dos Sayajins. Meu poder é mais de 8 mil.'
+                ved.style.background = 'blue' 
+            } else {
+                eusou.innerText ='Tente um guerreiro mais forte.'
+            }
+        }                        
+    </script>
+</body>
+</html>
