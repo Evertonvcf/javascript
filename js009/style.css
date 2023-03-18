@@ -1,0 +1,46 @@
+body {
+    background-color: rgb(67, 93, 141);
+}
+section {
+    width:400px;
+    height:400px;
+    margin: auto;
+    border-radius: 10px 10px 0px 0px;
+    background-color: white;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.494);
+}
+h1  {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.484);
+}
+footer a, p {
+    width:390px;
+    
+    text-align: center;
+    background-color: rgb(85, 85, 235);
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    margin: auto;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.247);
+}
+footer a:hover {
+    text-decoration: underline;
+    color: rgb(163, 162, 162);
+}
+script source {
+    text-align: center;
+}
+
+div {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 10px;
+}
