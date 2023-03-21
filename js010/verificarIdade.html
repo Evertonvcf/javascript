@@ -22,7 +22,7 @@
             margin: auto;
             background-color: white;
             width: 380px;
-            text-align: justify;
+            text-align: center;
             padding-bottom: 1px;
 
         }
@@ -52,8 +52,6 @@
                 <label for="fem">Feminino</label>
             </p>
                 <input type="button" value="verificar" onclick="verificar()">
-             
-                <img id='img' src="imagens/homan_m.png" alt="Homem maduro">
                 <div id="res"><p>Preencha os dados acima para obter o resultado !
             </p>
             </div>
@@ -65,21 +63,49 @@
         function verificar() {
             var data = new Date ()
             var ano = data.getFullYear ()
-            var fidade = document.querySelector('input#idade')
+            var fidade = document.querySelector
+            ('input#idade')
             var res = document.querySelector('div#res')
-            if (fidade.value.lenght == 0 || Number(fidade.value) > ano) {
+            var img = document.querySelector('img#img')
+            if (Number(fidade.value) == 0 || Number(fidade.value) > ano) {
                 window.alert ('Verifique as informações e tente novamente !')
             } else {
                 var fsex = document.getElementsByName('radsex')
                 var years = ano - Number(fidade.value)
                 var genero = ''
+                var img = document.createElement('img')
+                img.setAttribute('id', 'foto')
                 if (fsex [0].checked) {
                     genero = 'Homem'
-                }else if (fsex [1].checked) {
+                    if (years >= 0 && years < 10){ 
+                        img.setAttribute('src','imagens/criancah.png')// faz a busca da imagem no diretório
+                        //criança
+                    } else if ( years < 21) {
+                        img.setAttribute('src','imagens/homemp.png')// faz a busca da imagem no diretório
+                        //Jovem
+                    }else if (years < 50) {
+                        img.setAttribute('src','imagens/homan_m.png')// faz a busca da imagem no diretório
+                        //adulto
+                    } else  {
+                        img.setAttribute('src','imagens/homeng.png')// faz a busca da imagem no diretório
+                    } //idoso
+                } else if (fsex [1].checked) {
                     genero ='Mulher'
+                    if (years >= 0 && years < 10){
+                        img.setAttribute('src','imagens/criancam.png')// faz a busca da imagem no diretório
+                        //criança
+                    } else if ( years < 21){
+                        img.setAttribute('src','imagens/mulherp.png')// faz a busca da imagem no diretório
+                        //Jovem
+                    }else if (years < 50) {
+                        img.setAttribute('src','imagens/mulherm.png')// faz a busca da imagem no diretório
+                        //adulto
+                    } else  {
+                        img.setAttribute('src','imagens/mulherg.png')// faz a busca da imagem no diretório
+                    } //idoso
                 }
-                res.style.textali
                 res.innerHTML = `Detectamos ${genero} de ${years} anos `
+                res.appendChild(img)//appendChild serve para mostrar a imagen na tela
                 
 
             }
