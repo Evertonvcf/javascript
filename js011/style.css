@@ -15,3 +15,8 @@ section {
     color: black;
     font-weight: bold;
 }
+div > p {
+    text-align:left;
+    font-style: normal;
+    padding: 2px;
+}
