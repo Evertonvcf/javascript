@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabuada</title>
+    <style>
+        body {
+            background-color: #3F83D9;
+            color:white;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.431);
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: left;
+        }
+        h1  {text-align: center;}
+        section {
+            background-color: white;
+            color: gray;
+            font-weight: bold;
+            text-shadow: none;
+            width: 400px;
+            height: 300px;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.508);
+            border-radius: 10px;
+            padding:10px;
+            padding-left: 50px;
+            margin: auto;
+        }
+        select {
+         
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TABUADA</h1>
+    </header>
+    <section>
+        <div>
+            <p>Numero: <input type="number" name="tab" id="txtn">
+                <input type="button" value="Gerar tabuada" onclick="tabuada()">
+            </p>
+        </div>
+        <div id="tab">
+            <select name="tabuada" id="seltab" size="10">
+            <option >digite um numero acima</option>
+        </select>
+            
+        </div>
+    </section>
+    <script src="tabuada.js"></script>
+</body>
+</html> 
