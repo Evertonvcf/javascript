@@ -5,7 +5,7 @@ body {
         font-family: Arial, Helvetica, sans-serif;
         text-align: center;
 }
-section {
+section{
     background-color: white;
     color: black;
     text-shadow: none;
@@ -16,7 +16,11 @@ section {
     padding: 10px;
 }
 
- div {
-    text-align: left;
+#numAdd {
+    margin-left: -250px;
+    width: 200px;
     
+ }
+ div {
+    margin-left: -50px;
  }
